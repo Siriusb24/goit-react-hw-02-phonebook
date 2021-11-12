@@ -1,5 +1,5 @@
 {
-  "name": "react-default",
+  "name": "react-phonebook",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -13,6 +13,7 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
+    "uuid": "^8.3.2",
     "web-vitals": "^1.1.2"
   },
   "scripts": {
@@ -26,13 +27,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Eduard-Konovka/react-default.git"
+    "url": "https://github.com/Siriusb24/goit-react-hw-02-phonebook.git"
   },
-  "author": "Eduard Konovka <ed098ua@gmail.com>",
+  "author": "",
   "bugs": {
-    "url": "https://github.com/Eduard-Konovka/react-default/issues"
+    "url": "https://github.com/Siriusb24/goit-react-hw-02-phonebook/issues"
   },
-  "homepage": "https://Eduard-Konovka.github.io/react-default",
+  "homepage": "https://siriusb24.github.io/goit-react-hw-02-phonebook/",
   "eslintConfig": {
     "extends": [
       "react-app",
@@ -59,6 +60,8 @@
   },
   "lint-staged": {
     "*.{js,jsx}": "eslint --cache --fix",
-    "*.{js,jsx,css,scss,md}": "prettier --write"
+    "*.{js,jsx,css,scss,md}": "prettier --write",
+    "*.js": "eslint --cache --fix",
+    "*.{js,css,md}": "prettier --write"
   }
 }
