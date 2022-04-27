@@ -3,6 +3,7 @@ import { Component } from 'react';
 import Form from 'components/Form/Form';
 import PhoneBookList from 'components/List/PhoneBookList';
 import Filter from 'components/Filter/Filter';
+import Section from './components/Section/Section';
 
 export default class App extends Component {
   state = {
@@ -44,10 +45,6 @@ export default class App extends Component {
       contact.name.toLowerCase().includes(normalizeContact),
     );
 
-    if (needContacts.length === 0) {
-      alert(`This ${filter} Not faund`);
-    }
-
     return needContacts;
   };
 
@@ -62,15 +59,14 @@ export default class App extends Component {
     const filteredContacts = this.handleFilter();
 
     return (
-      <>
-        <h1>Phonebook</h1>
+      <Section title="Phonebook">
         <Form onSubmit={this.formSubmit} />
         <Filter value={filter} onChange={this.handleChangeFilter} />
         <PhoneBookList
           contact={filteredContacts}
           onDeleteContact={this.handleDeleteContact}
         />
-      </>
+      </Section>
     );
   }
 }

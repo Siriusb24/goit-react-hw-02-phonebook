@@ -1,10 +1,12 @@
 import ListItem from './ListItem';
+import PropTypes from 'prop-types';
+import s from '../List/PhoneBookList.module.css';
 
 export default function PhoneBookList({ contact, onDeleteContact }) {
   //console.log(contact)
   return (
-    <div>
-      <h2>Phone List of friends</h2>
+    <div className={s.conteiner}>
+      <h2 className={s.title}>Phone List of friends</h2>
       <ul>
         {contact.map(({ name, number, id }) => (
           <ListItem
@@ -19,3 +21,11 @@ export default function PhoneBookList({ contact, onDeleteContact }) {
     </div>
   );
 }
+
+PhoneBookList.propTypes = {
+  contact: PropTypes.array,
+  id: PropTypes.string,
+  name: PropTypes.string,
+  number: PropTypes.string,
+  onDeleteContact: PropTypes.func.isRequired,
+};
