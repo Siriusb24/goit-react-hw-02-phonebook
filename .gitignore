@@ -121,3 +121,6 @@ dist
 .env.production.local
 .DS_Store
 
+# Ignore Mac DS_Store files
+.DS_Store
+**/.DS_Store
