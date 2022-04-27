@@ -115,7 +115,7 @@ dist
 .tern-port
 
 # misc
-.DS_Store
+.DS_Stor
 .env.local
 .env.development.local
 .env.test.local
